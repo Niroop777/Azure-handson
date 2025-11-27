@@ -5,7 +5,7 @@ Whenever a new blob is uploaded to a storage container, an **Event Grid Trigger*
 
 ---
 
-## **Architecture Overview**
+## Architecture Overview
 
 1. A blob is uploaded to the **documents** container in Azure Blob Storage.
 2. **Event Grid** detects the `BlobCreated` event.
@@ -17,7 +17,7 @@ Whenever a new blob is uploaded to a storage container, an **Event Grid Trigger*
 
 ---
 
-# **Technologies Used**
+## Technologies Used
 
 - Azure Functions (Python)
 - Azure Blob Storage
@@ -31,7 +31,7 @@ Whenever a new blob is uploaded to a storage container, an **Event Grid Trigger*
 
 ---
 
-# **Project Structure**
+## Project Structure
 
 ```
 Task3_IndexBlobMetadata/
@@ -42,9 +42,9 @@ Task3_IndexBlobMetadata/
 
 ```
 
-# **Azure Setup Instructions**
+## Azure Setup Instructions
 
-## **Step 1 — Create Azure Blob Storage**
+### **Step 1 — Create Azure Blob Storage**
 
 - Create a **Storage Account**
 - Add a container named **documents**
@@ -55,7 +55,7 @@ Task3_IndexBlobMetadata/
 
 ---
 
-## **Step 2 — Create Azure Cosmos DB**
+### **Step 2 — Create Azure Cosmos DB**
 
 - Create Cosmos DB Account (Core SQL API)
 - Create:
@@ -68,13 +68,13 @@ Task3_IndexBlobMetadata/
 
 ---
 
-## **Step 3 — Deploy the Azure Function**
+### **Step 3 — Deploy the Azure Function**
 
 deployed manually:
 
 ![alt text](image-5.png)
 
-## ![alt text](image-6.png)
+![alt text](image-6.png)
 
 Then configure **Application Settings**:
 
@@ -91,7 +91,7 @@ Then configure **Application Settings**:
 
 ---
 
-## **Step 4 — Create Event Grid Subscription**
+### **Step 4 — Create Event Grid Subscription**
 
 Under **Storage Account → Events → + Event Subscription**:
 
@@ -109,7 +109,7 @@ Under **Storage Account → Events → + Event Subscription**:
 
 ---
 
-# Testing the Pipeline (Cloud)
+## Testing the Pipeline (Cloud)
 
 ### Upload a file to Blob Storage
 
@@ -129,7 +129,7 @@ You should see a new document:
 
 ---
 
-# **Expected Output**
+## Expected Output
 
 A document stored in Cosmos DB:
 
@@ -149,7 +149,7 @@ A document stored in Cosmos DB:
 }
 ```
 
-# **Conclusion**
+## Conclusion
 
 This project fully automates blob metadata extraction using a serverless design.
 It integrates seamlessly with Cosmos DB for storage.
