@@ -5,7 +5,7 @@ The function reads product documents from **Azure Cosmos DB**, transforms them, 
 
 ---
 
-# **1. Problem Statement**
+## Problem Statement
 
 Whenever required, migrate all documents from a Cosmos DB **Products** container into Azure SQL tables.
 
@@ -21,7 +21,7 @@ The function must:
 
 ---
 
-# **2. Architecture Overview**
+## Architecture Overview
 
 ```
 Cosmos DB (Products)
@@ -38,7 +38,7 @@ Azure SQL Database
 
 ---
 
-# **3. Azure Resources Used**
+## Azure Resources Used
 
 | Resource                        | Purpose                    |
 | ------------------------------- | -------------------------- |
@@ -55,7 +55,7 @@ Azure SQL Database
 
 ---
 
-# **4. Cosmos DB Source Structure (Sample Document)**
+## Cosmos DB Source Structure (Sample Document)
 
 Each product document looks like:
 
@@ -73,7 +73,7 @@ Each product document looks like:
 
 ---
 
-# **5. SQL Target Schema**
+## SQL Target Schema
 
 ### **Products Table**
 
@@ -93,7 +93,7 @@ Each product document looks like:
 
 ---
 
-# **6. Local Development**
+## Local Development
 
 ### **Install Dependencies**
 
@@ -111,7 +111,7 @@ func start
 
 ---
 
-# **7. Azure Function — HTTP Endpoint**
+## Azure Function — HTTP Endpoint
 
 ```
 POST https://<functionapp>.azurewebsites.net/api/migrate-products?code=<function-key>
@@ -121,7 +121,7 @@ POST https://<functionapp>.azurewebsites.net/api/migrate-products?code=<function
 
 ---
 
-# **8. Migration Flow**
+## Migration Flow
 
 1. Connect to Cosmos DB
 2. Fetch documents in batches
@@ -133,7 +133,7 @@ POST https://<functionapp>.azurewebsites.net/api/migrate-products?code=<function
 
 ---
 
-# **9. Running Migration from Azure (Postman Test)**
+## Running Migration from Azure (Postman Test)
 
 ### **POST Request Example**
 
@@ -158,7 +158,7 @@ POST https://<functionapp>.azurewebsites.net/api/migrate-products?code=<your-fun
 
 ---
 
-# **10. SQL Verification**
+## SQL Verification
 
 ### Query:
 
@@ -173,7 +173,7 @@ SELECT * FROM dbo.ProductTags;
 
 ---
 
-# **11. Migration Report Contents**
+## Migration Report Contents
 
 The migration returns:
 
@@ -186,7 +186,7 @@ The migration returns:
 
 ---
 
-# **12. Error Handling & Throttling**
+## Error Handling & Throttling
 
 - Uses Cosmos continuation tokens
 - Uses try/except blocks
@@ -195,7 +195,7 @@ The migration returns:
 
 ---
 
-# **13. Conclusion**
+## Conclusion
 
 ✔ Migration completed successfully
 ✔ Cosmos DB documents transformed and inserted into SQL
