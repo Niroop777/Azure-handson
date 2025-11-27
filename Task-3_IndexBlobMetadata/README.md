@@ -1,4 +1,4 @@
-# ** Task 3 : Blob Metadata Indexing with Azure Function, Event Grid & Cosmos DB**
+#  Task 3 : Blob Metadata Indexing with Azure Function, Event Grid & Cosmos DB
 
 This project demonstrates an automated serverless pipeline using **Azure Functions**, **Event Grid**, **Blob Storage**, and **Azure Cosmos DB**.
 Whenever a new blob is uploaded to a storage container, an **Event Grid Trigger** automatically extracts the blob's metadata and stores it in **Cosmos DB**.
