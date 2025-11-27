@@ -1,4 +1,4 @@
-# Azure Functions Product API
+# Task-1 HTTP CRUD API 
 
 This project is an Azure Functions-based REST API for performing CRUD operations on products stored in Azure Cosmos DB. It includes functions to add, update, delete, list, and retrieve products.
 
