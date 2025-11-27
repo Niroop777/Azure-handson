@@ -1,13 +1,11 @@
----
+
 # Task 6 – Azure Function: Orders Cleanup & Archival (Timer Trigger)
 
 This task implements an automated cleanup and archival process using **Azure Functions**, **Azure SQL Database**, and **Azure Blob Storage**.
 A TimerTrigger function runs on a schedule, identifies old Orders from the SQL database, archives them as NDJSON files in Blob Storage, and then deletes those archived rows from SQL.
 ---
 
-## **Overview of the Task**
-
-This function performs the following actions:
+## Overview of the Task
 
 1. Connect to Azure SQL Database
 2. Select orders older than _N_ days
@@ -18,7 +16,7 @@ This function performs the following actions:
 
 ---
 
-## **Final Architecture Flow**
+## Architecture Flow
 
 ```
 Azure Function (Timer Trigger)
@@ -34,7 +32,7 @@ Azure Function (Timer Trigger)
 
 ---
 
-## **Timer Trigger Schedule**
+## Timer Trigger Schedule
 
 The schedule is configured in `function.json`:
 
@@ -46,7 +44,7 @@ This means: **Runs every day at 02:00:00 AM UTC** (can be changed as needed).
 
 ---
 
-## **Blob Storage Folder Structure**
+## Blob Storage Folder Structure
 
 Archived records are stored under:
 
@@ -65,7 +63,7 @@ archive/
 
 ---
 
-## **NDJSON Format**
+## NDJSON Format
 
 Sample content inside the generated file:
 
@@ -83,7 +81,7 @@ Each line represents a single order record.
 
 ---
 
-## **SQL Table Before and After Cleanup**
+## SQL Table Before and After Cleanup
 
 The function removes all records older than `DAYS_OLD` days (default = 30).
 After the function runs, remaining rows = only recent orders.
@@ -100,7 +98,7 @@ After:
 
 ---
 
-## **Required Azure App Settings**
+## Required Azure App Settings
 
 Go to:
 
@@ -124,7 +122,7 @@ Add or confirm:
 
 ---
 
-## **Code Summary (Main Highlights)**
+## Code Summary (Main Highlights)
 
 ### 🔹 Fetch old rows
 
@@ -152,13 +150,13 @@ cursor.execute("DELETE FROM Orders WHERE id IN (?)", ids_chunk)
 
 ---
 
-## **Local run**
+## Local run
 
 ![alt text](image-6.png)
 
 ---
 
-## **Deployment**
+## Deployment
 
 Publish to Azure:
 
