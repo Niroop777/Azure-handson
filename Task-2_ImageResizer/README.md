@@ -2,7 +2,7 @@
 
 ---
 
-# **1. Problem Statement**
+##  Problem Statement
 
 Whenever a user uploads an image through an HTTP endpoint:
 
@@ -19,7 +19,7 @@ Whenever a user uploads an image through an HTTP endpoint:
 
 ---
 
-# **2. Architecture Overview**
+##  Architecture Overview
 
 ```
      [HTTP Upload]
@@ -52,7 +52,7 @@ Whenever a user uploads an image through an HTTP endpoint:
 
 ---
 
-# **3. Azure Resources Used**
+## Azure Resources Used
 
 | Resource                        | Purpose                         |
 | ------------------------------- | ------------------------------- |
@@ -63,7 +63,7 @@ Whenever a user uploads an image through an HTTP endpoint:
 
 ---
 
-# **4. Project Structure**
+## Project Structure
 
 ```
 Task-2_ImageResizer/
@@ -84,7 +84,7 @@ Task-2_ImageResizer/
 
 ---
 
-# **5. Configuration**
+## Configuration
 
 ### `local.settings.json`
 
@@ -109,7 +109,7 @@ Task-2_ImageResizer/
 
 ---
 
-# **6. Upload Function (HTTP Trigger)**
+## Upload Function (HTTP Trigger)
 
 ### **function.json**
 
@@ -190,7 +190,7 @@ def main(req: func.HttpRequest, msg: func.Out[str]) -> func.HttpResponse:
 
 ---
 
-# **7. Process Queue Function (Image Resizer)**
+## Process Queue Function (Image Resizer)
 
 ### **function.json**
 
@@ -304,7 +304,7 @@ def main(msg: func.QueueMessage):
 
 ---
 
-# **8. How to Test**
+## How to Test
 
 ### **Run locally**
 
@@ -332,7 +332,7 @@ Body → form-data → file → <select image>
 
 ---
 
-# **9. Retry & Error Handling**
+## Retry & Error Handling
 
 | Scenario          | Behaviour                                     |
 | ----------------- | --------------------------------------------- |
@@ -342,7 +342,7 @@ Body → form-data → file → <select image>
 
 ---
 
-# **10. Conclusion**
+## Conclusion
 
 ✔ HTTP upload endpoint
 ✔ Uploads image to blob storage
