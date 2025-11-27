@@ -1,0 +1,3 @@
+# Hello Niroop
+This is a local Event Grid test file.
+We will index this into Cosmos DB.

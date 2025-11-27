@@ -1,0 +1,21 @@
+[
+  {
+    "topic": "/subscriptions/test/resourceGroups/local/providers/Microsoft.Storage/storageAccounts/niroopsblob",
+    "subject": "/blobServices/default/containers/documents/blobs/sample1.txt",
+    "eventType": "Microsoft.Storage.BlobCreated",
+    "eventTime": "2025-11-26T10:00:00Z",
+    "id": "abc123",
+    "data": {
+      "api": "PutBlob",
+      "clientRequestId": "12345",
+      "requestId": "67890",
+      "eTag": "0x8D123456789",
+      "contentType": "text/plain",
+      "contentLength": 16,
+      "blobType": "BlockBlob",
+      "url": "https://niroopsblob.blob.core.windows.net/documents/sample1.txt"
+    },
+    "dataVersion": "",
+    "metadataVersion": "1"
+  }
+]
