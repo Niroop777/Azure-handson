@@ -1,4 +1,4 @@
-# **Task 2 — Queue-Driven Image Resizer **
+# Task 2 — Queue-Driven Image Resizer 
 
 ---
 
