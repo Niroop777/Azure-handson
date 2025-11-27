@@ -1,8 +1,8 @@
 
 # Task 6 – Azure Function: Orders Cleanup & Archival (Timer Trigger)
 
-This task implements an automated cleanup and archival process using **Azure Functions**, **Azure SQL Database**, and **Azure Blob Storage**.
-A TimerTrigger function runs on a schedule, identifies old Orders from the SQL database, archives them as NDJSON files in Blob Storage, and then deletes those archived rows from SQL.
+**This task implements an automated cleanup and archival process using **Azure Functions**, **Azure SQL Database**, and **Azure Blob Storage**.
+A TimerTrigger function runs on a schedule, identifies old Orders from the SQL database, archives them as NDJSON files in Blob Storage, and then deletes those archived rows from SQL.**
 ---
 
 ## Overview of the Task
