@@ -80,8 +80,6 @@ Task-2_ImageResizer/
 └── host.json
 ```
 
-![alt text](image.png)
-
 ---
 
 ## Configuration
